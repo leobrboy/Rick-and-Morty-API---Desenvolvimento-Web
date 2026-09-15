@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal Interdimensional | Rick and Morty</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__content">
+      <img class="header__portal" src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt="">
+      <div>
+        <h1 class="header__title">Portal Interdimensional</h1>
+        <p class="header__subtitle">Explorando o multiverso de Rick and Morty com dados da API oficial</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="about">
+    <h2>Sobre o desenho</h2>
+    <p>
+      Rick and Morty é uma animação criada por Justin Roiland e Dan Harmon, exibida pelo
+      Adult Swim desde 2013. A série segue o cientista Rick Sanchez e seu neto Morty em
+      viagens por dimensões e universos paralelos, misturando ficção científica com humor
+      ácido. É um dos desenhos mais populares dos últimos anos, com uma base de fãs enorme.
+    </p>
+  </section>
+
+  <section class="filters">
+    <h2>Personagens</h2>
+    <p class="filters__hint">Os personagens abaixo vêm direto da API via fetch, sem nada fixo no HTML.</p>
+
+    <form class="filters__form" id="filter-form">
+      <input type="text" id="search-input" placeholder="Nome do personagem" autocomplete="off" />
+
+      <select id="status-select">
+        <option value="">Todos os status</option>
+        <option value="alive">Vivo</option>
+        <option value="dead">Morto</option>
+        <option value="unknown">Desconhecido</option>
+      </select>
+
+      <button type="submit">Buscar</button>
+    </form>
+  </section>
+
+  <p id="loading-message" class="state-message" hidden>Carregando personagens...</p>
+  <p id="error-message" class="state-message state-message--error" hidden></p>
+  <p id="empty-message" class="state-message" hidden>Nenhum personagem encontrado.</p>
+
+  <main class="cards" id="cards-container">
+    <!-- cards entram aqui via JS -->
+  </main>
+
+  <div class="pagination">
+    <button id="prev-btn" disabled>&larr; Anterior</button>
+    <span id="page-indicator">Página 1</span>
+    <button id="next-btn">Próxima &rarr;</button>
+  </div>
+
+  <footer class="footer">
+    <p>Projeto acadêmico em HTML, CSS e JS puro, usando a <a href="https://rickandmortyapi.com/" target="_blank" rel="noopener">Rick and Morty API</a>.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
