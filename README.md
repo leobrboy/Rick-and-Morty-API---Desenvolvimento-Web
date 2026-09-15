@@ -202,7 +202,7 @@ Como o projeto utiliza apenas HTML, CSS e JavaScript, não é necessário instal
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/SEU-USUARIO/rick-and-morty-app.git
+git clone https://github.com/leobrboy/rick-and-morty-app.git
 ```
 
 ### 2. Entre na pasta
